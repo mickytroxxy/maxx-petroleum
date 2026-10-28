@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Clock, MapPin, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, Clock, MapPin } from 'lucide-react';
 import { WHY_US_PILLARS } from '../data/fuelData';
 
 export const WhyMaxx: React.FC = () => {
@@ -21,43 +21,61 @@ export const WhyMaxx: React.FC = () => {
           </p>
         </div>
 
-        {/* 3 Pillars Grid (Subtle all-around hairline borders, no thick left borders) */}
+        {/* 3 Pillars Grid with Authentic Operational Verification Photos */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {WHY_US_PILLARS.map((pillar, idx) => {
             const Icon = icons[idx] || ShieldCheck;
             return (
               <div
                 key={pillar.title}
-                className="p-8 rounded-2xl bg-slate-900/60 border border-emerald-900/40 hover:border-emerald-600/50 transition-all flex flex-col justify-between"
+                className="rounded-2xl bg-slate-900/60 border border-emerald-900/40 hover:border-emerald-600/50 transition-all flex flex-col justify-between overflow-hidden group shadow-lg"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-emerald-950/80 border border-emerald-800/60 flex items-center justify-center text-emerald-400">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <span className="text-xs font-mono text-emerald-400 font-semibold">
-                      0{idx + 1}
+                {/* Authentic verification photo */}
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
+                  <img
+                    src={pillar.image}
+                    alt={pillar.title}
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+                  <div className="absolute top-3 left-3">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-300 bg-slate-950/80 px-2 py-0.5 rounded border border-emerald-800/40">
+                      Operational Proof
                     </span>
                   </div>
-
-                  <h3 className="text-xl font-bold text-white mb-1">
-                    {pillar.title}
-                  </h3>
-                  <div className="text-xs text-emerald-400 font-medium mb-3">
-                    {pillar.subtitle}
-                  </div>
-
-                  <p className="text-sm text-slate-300 leading-relaxed mb-6">
-                    {pillar.description}
-                  </p>
                 </div>
 
-                <div className="pt-6 border-t border-slate-800">
-                  <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono tabular-nums">
-                    {pillar.metric}
+                <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-10 h-10 rounded-xl bg-emerald-950/80 border border-emerald-800/60 flex items-center justify-center text-emerald-400">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <span className="text-xs font-mono text-emerald-400 font-semibold">
+                        0{idx + 1}
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl font-bold text-white mb-1">
+                      {pillar.title}
+                    </h3>
+                    <div className="text-xs text-emerald-400 font-medium mb-3">
+                      {pillar.subtitle}
+                    </div>
+
+                    <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                      {pillar.description}
+                    </p>
                   </div>
-                  <div className="text-xs text-slate-400 font-medium">
-                    {pillar.metricLabel}
+
+                  <div className="pt-4 border-t border-slate-800">
+                    <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono tabular-nums">
+                      {pillar.metric}
+                    </div>
+                    <div className="text-xs text-slate-400 font-medium">
+                      {pillar.metricLabel}
+                    </div>
                   </div>
                 </div>
               </div>
