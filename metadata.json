@@ -1,0 +1,6 @@
+{
+  "name": "Maxx Petroleum - Bulk Fuel & Lubricants Flow",
+  "description": "Reliable bulk fuel, diesel 50ppm, and lubricant supplier with private fleet and depot storage in Meyerton, Gauteng.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
