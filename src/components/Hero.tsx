@@ -10,27 +10,27 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
   const heroPhotos = [
     {
       src: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_11.30.58_e15bd5ce.jpeg',
-      title: 'Maxx Petroleum MAN Tanker Rig',
+      title: 'Maxx Petroleum 45,000L Tanker Rig',
       caption: 'En route on Gauteng corridor with bulk diesel',
-      tag: 'Real Fleet Asset',
+      tag: '45k Litre Fleet',
     },
     {
-      src: HERO_IMAGE,
-      title: 'Emerald Green Fleet Vision',
-      caption: 'Clean, low-emission petroleum transport',
-      tag: 'Bio & Eco-Diesel',
+      src: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_11.30.58__3__ceeb5b8f.jpeg',
+      title: 'Maxx Petroleum Leadership & Fleet',
+      caption: 'Owner-operated depot in Meyerton, Gauteng',
+      tag: 'People You Trust',
+    },
+    {
+      src: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_13.08.10_9b813414.jpeg',
+      title: 'Heavy Plant Refuelling — Bell B40D',
+      caption: 'Discharging straight into heavy mining haulers',
+      tag: 'On-Site Machine Refuelling',
     },
     {
       src: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_11.30.35_3b62b9b1.jpeg',
       title: 'Meyerton Depot Bulk Storage',
       caption: 'Multi-tank bulk terminal in Meyerton',
       tag: 'Depot Tanks',
-    },
-    {
-      src: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_11.30.59_4da1b0dd.jpeg',
-      title: 'On-Site Machine Refuelling',
-      caption: 'Direct delivery into heavy earthmoving plant',
-      tag: 'Mobile Bowser',
     },
   ];
 
@@ -95,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
               </div>
               <div className="flex items-center gap-1.5">
                 <Truck className="w-4 h-4 text-emerald-400" />
-                <span>Own Dedicated MAN &amp; Volvo Fleet</span>
+                <span>Own Dedicated 45,000L Fleet</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Clock className="w-4 h-4 text-emerald-400" />
@@ -161,16 +161,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
           </div>
         </div>
 
-        {/* 4-Column KPI proof strip below hero split */}
+        {/* 4-Column KPI proof strip below hero split - Updated to 45,000L */}
         <div className="mt-16 pt-8 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="space-y-1">
             <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono tabular-nums">
-              38,000<span className="text-emerald-400 font-sans text-xl">L</span>
+              45,000<span className="text-emerald-400 font-sans text-xl">L</span>
             </div>
             <div className="text-xs text-slate-400 uppercase tracking-wider font-semibold">
               Max Tanker Drop
             </div>
-            <div className="text-xs text-slate-500">From 1,000L bowsers to tri-axles</div>
+            <div className="text-xs text-slate-500">From 1,000L bowsers to multi-axle rigs</div>
           </div>
 
           <div className="space-y-1">

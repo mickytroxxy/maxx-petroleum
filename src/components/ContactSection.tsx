@@ -214,7 +214,7 @@ export const ContactSection: React.FC = () => {
                       <option value="5000">5,000 Litres (Mid-sized tank)</option>
                       <option value="10000">10,000 Litres (Transport yard)</option>
                       <option value="20000">20,000 Litres (Bulk tank)</option>
-                      <option value="38000">38,000 Litres (Full Tri-Axle rig)</option>
+                      <option value="45000">45,000 Litres (Full Multi-Axle rig)</option>
                     </select>
                   </div>
 

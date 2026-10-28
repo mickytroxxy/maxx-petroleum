@@ -19,13 +19,31 @@ export interface GalleryPhoto {
 
 export const REAL_PHOTOS: GalleryPhoto[] = [
   {
+    id: 'team-leadership',
+    src: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_11.30.58__3__ceeb5b8f.jpeg',
+    title: 'The Team Behind Maxx Petroleum',
+    subtitle: 'People you can trust, directly in the yard',
+    category: 'fleet',
+    description: 'Maxx Petroleum leadership and logistics team on site in Meyerton in front of our branded Scania and Mercedes-Benz heavy fuel tankers.',
+    badge: 'Owner Operated',
+  },
+  {
+    id: 'bell-b40d-refuel',
+    src: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_13.08.10_9b813414.jpeg',
+    title: 'Heavy Hauler Refuelling — Bell B40D',
+    subtitle: 'Direct tanker-to-plant transfer on site',
+    category: 'fleet',
+    description: 'Maxx Petroleum bulk tanker discharging directly into a heavy-duty Bell B40D articulated dump truck on an active industrial quarry site.',
+    badge: '45,000L Fleet Drop',
+  },
+  {
     id: 'man-convoy',
     src: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_11.30.58_e15bd5ce.jpeg',
     title: 'Rigged for the Road',
     subtitle: 'Own trucks, own trailers — no third-party delays',
     category: 'fleet',
     description: 'Maxx Petroleum branded MAN truck tractor and tandem bulk fuel tankers in transit on the Gauteng logistics corridor.',
-    badge: 'Heavy Road Tanker',
+    badge: '45,000L Road Tanker',
   },
   {
     id: 'man-branded-tractor',
@@ -34,7 +52,7 @@ export const REAL_PHOTOS: GalleryPhoto[] = [
     subtitle: 'Dedicated bulk delivery power',
     category: 'fleet',
     description: 'High-capacity MAN prime mover with double tanker barrels, fully compliant with SABS Hazchem standards.',
-    badge: '38,000L Fleet',
+    badge: '45,000L Fleet',
   },
   {
     id: 'meyerton-yard-staging',
@@ -42,7 +60,7 @@ export const REAL_PHOTOS: GalleryPhoto[] = [
     title: 'The Yard in Meyerton',
     subtitle: 'Tankers staged and ready to dispatch',
     category: 'fleet',
-    description: 'Multi-axle tankers lined up under the canopy at the Maxx Petroleum yard, ready for morning fleet drops.',
+    description: 'Multi-axle tankers lined up under the canopy at the Maxx Petroleum yard, ready for 04:00 AM fleet drops.',
     badge: 'Depot Yard',
   },
   {
@@ -64,13 +82,22 @@ export const REAL_PHOTOS: GalleryPhoto[] = [
     badge: 'Dedicated Fleet',
   },
   {
+    id: 'yellow-metered-bowser',
+    src: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_12.24.00__1__4e0ff07b.jpeg',
+    title: 'ProLifestyle Metered Diesel Bowser',
+    subtitle: 'Calibrated 4-digit flow meter on trailer',
+    category: 'bowsers',
+    description: 'Trailer-mounted heavy-duty diesel bowser with digital volumetric meter, inline fuel filter canister, and high-pressure electric transfer pump.',
+    badge: 'Digital Flow Bowser',
+  },
+  {
     id: 'onsite-plant-refuel',
     src: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_11.30.59_4da1b0dd.jpeg',
     title: 'Fuelled on Site — Heavy Machinery',
     subtitle: 'We pump straight into your machine',
     category: 'bowsers',
     description: 'Direct site refuelling of CAT 340D earthmoving excavator with mobile bowser and lighting tower in off-road industrial terrain.',
-    badge: 'On-Site Machine Refuelling',
+    badge: 'On-Site Refuelling',
   },
   {
     id: 'bakkie-bowser-service',
@@ -82,6 +109,15 @@ export const REAL_PHOTOS: GalleryPhoto[] = [
     badge: 'Mobile Bowser',
   },
   {
+    id: 'mining-site-overview',
+    src: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_12.24.00_2a54a2ed.jpeg',
+    title: 'Mining & Heavy Quarry Sites',
+    subtitle: 'Supplying high-demand off-road operations',
+    category: 'bowsers',
+    description: 'Open-cast mining and aggregate quarry operations powered continuously with bulk diesel delivered directly to active machinery.',
+    badge: 'Mining Supply',
+  },
+  {
     id: 'hydrometer-density-test',
     src: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_11.30.56_ff436572.jpeg',
     title: 'Quality Guaranteed & Density Testing',
@@ -89,6 +125,15 @@ export const REAL_PHOTOS: GalleryPhoto[] = [
     category: 'quality',
     description: 'Physical density and contamination testing of diesel in a graduated cylinder before tanker dispatch to ensure 100% SANS 342 compliance.',
     badge: 'Lab Density Testing',
+  },
+  {
+    id: 'site-supervisor-haulers',
+    src: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_12.24.01_69132849.jpeg',
+    title: 'On-Site Fuel Dispatch Coordination',
+    subtitle: 'Hands-on management for heavy fleets',
+    category: 'quality',
+    description: 'Logistics manager coordinating delivery schedules and volume reconciliation between massive mining haulers on site.',
+    badge: 'Site Coordination',
   },
   {
     id: 'warehouse-bulk-array',
@@ -173,7 +218,7 @@ export const SERVICES = [
     id: 'diesel',
     title: 'Bulk Diesel 50ppm & 500ppm',
     description: 'Clean, compliant low-sulphur diesel delivered directly in bulk to transport yards, farms, plant machinery, and generators.',
-    specs: ['SANS 342 Certified', 'Water & Sediment Tested', 'From 1,000L to 38,000L drops'],
+    specs: ['SANS 342 Certified', 'Water & Sediment Tested', 'From 1,000L to 45,000L drops'],
     badgeText: '50ppm & 500ppm',
   },
   {
@@ -187,7 +232,7 @@ export const SERVICES = [
     id: 'on-site',
     title: 'On-Site Tanker & Bowser Delivery',
     description: 'Our dedicated tanker fleet brings fuel straight to your stationary tanks, generators, or directly into heavy equipment on schedule.',
-    specs: ['Own MAN & Volvo Rig Fleet', 'Calibrated Flow Meters', '4x4 Off-Road Bakkie Bowsers'],
+    specs: ['Own MAN, Scania & Volvo Fleet', 'Calibrated Flow Meters', '4x4 Off-Road Bakkie Bowsers'],
     badgeText: 'Direct to Tank',
   },
   {
@@ -205,9 +250,9 @@ export const FLEET_ITEMS: FleetItem[] = [
     title: 'Rigged for the Road',
     category: 'fleet',
     subtitle: 'Own trucks, own trailers — no third-party delays',
-    description: 'Our fleet of MAN and Volvo truck tractors and multi-compartment fuel tankers operate daily across Gauteng, the Vaal Triangle, and neighboring provinces.',
+    description: 'Our fleet of MAN, Scania, and Volvo truck tractors and multi-compartment fuel tankers operate daily across Gauteng, the Vaal Triangle, and neighboring provinces.',
     image: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_11.30.58_e15bd5ce.jpeg',
-    specs: ['38,000L Max Payload', 'Compartmentalized Drops', 'Live GPS Telemetry', 'Dangerous Goods Certified'],
+    specs: ['45,000L Max Payload', 'Compartmentalized Drops', 'Live GPS Telemetry', 'Dangerous Goods Certified'],
   },
   {
     id: 'meyerton-depot',
@@ -224,8 +269,8 @@ export const FLEET_ITEMS: FleetItem[] = [
     category: 'bowsers',
     subtitle: 'We pump straight into your machine',
     description: 'Heavy-duty 4x4 pickup trucks and trailer-mounted diesel bowsers bring fuel straight into combines, tractors, excavators, and remote construction plants.',
-    image: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_11.30.59_4da1b0dd.jpeg',
-    specs: ['Direct Excavator Refuelling', '12V / 24V Fast Pumps', 'Off-Road Capability', 'Small Drops & Standby Plant'],
+    image: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_13.08.10_9b813414.jpeg',
+    specs: ['Direct Bell B40D Refuelling', 'Digital Volumetric Meter', 'Off-Road Capability', 'Small Drops & Standby Plant'],
   },
   {
     id: 'metered-pumping',
@@ -233,7 +278,7 @@ export const FLEET_ITEMS: FleetItem[] = [
     category: 'metering',
     subtitle: 'Every single litre measured and documented',
     description: 'Certified digital flow meters with printed audit tickets on every drop ensure 100% transparency, zero loss, and absolute billing accuracy.',
-    image: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_11.30.38__1__53d4e3c4.jpeg',
+    image: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_12.24.00__1__4e0ff07b.jpeg',
     specs: ['Weights & Measures Verified', 'Digital Flow Readout', 'Real-time Flow Velocity', 'Hydrometer Density Tested'],
   },
 ];
@@ -296,6 +341,6 @@ export const WHY_US_PILLARS = [
     description: 'Direct relationship with the owners. No middle brokers, no call centres. When you phone, you talk straight to the people loading the truck.',
     metric: '100%',
     metricLabel: 'Privately owned fleet & depot',
-    image: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_11.30.40_e4a49b36.jpeg',
+    image: '/assets/aistudio/WhatsApp_Image_2026-10-28_at_11.30.58__3__ceeb5b8f.jpeg',
   },
 ];

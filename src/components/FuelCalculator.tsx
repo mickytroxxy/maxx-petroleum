@@ -24,11 +24,11 @@ export const FuelCalculator: React.FC<FuelCalculatorProps> = ({ onSelectDrop }) 
   }[grade];
 
   // Volume discount factor for bulk loads
-  const discountFactor = litres >= 30000 ? 0.94 : litres >= 15000 ? 0.96 : litres >= 5000 ? 0.98 : 1.0;
+  const discountFactor = litres >= 40000 ? 0.93 : litres >= 25000 ? 0.95 : litres >= 10000 ? 0.97 : litres >= 5000 ? 0.985 : 1.0;
   const effectiveRate = baseRatePerLitre * discountFactor;
   const estimatedTotal = litres * effectiveRate;
 
-  // Calibrated flow rate: ~420 L/min for heavy depot rig, ~180 L/min for mobile bowser
+  // Calibrated flow rate: ~450 L/min for heavy depot rig, ~180 L/min for mobile bowser
   const pumpFlowRateLpm = litres <= 3000 ? 180 : 450;
   const dischargeMinutes = Math.max(5, Math.round(litres / pumpFlowRateLpm));
 
@@ -38,14 +38,14 @@ export const FuelCalculator: React.FC<FuelCalculatorProps> = ({ onSelectDrop }) 
       ? { name: '4x4 Bakkie Mobile Bowser', desc: 'Ideal for generators, tractors, and tight site access' }
       : litres <= 12000
       ? { name: 'Medium Rigid Tanker (6-Wheeler)', desc: 'Perfect for mid-size farm tanks & construction sites' }
-      : { name: 'Heavy Tri-Axle Tanker Rig', desc: 'Direct Meyerton bulk drop for transport yards and mines' };
+      : { name: 'Heavy Multi-Axle Tanker Rig (up to 45,000L)', desc: 'Direct Meyerton bulk drop for transport yards and mines' };
 
   const presets = [
     { label: '1,500L', value: 1500, note: 'Standby / Bowser' },
     { label: '5,000L', value: 5000, note: 'Farm / Construction' },
     { label: '10,000L', value: 10000, note: 'Fleet Yard Drop' },
     { label: '25,000L', value: 25000, note: 'High-Volume Depot' },
-    { label: '38,000L', value: 38000, note: 'Full Tri-Axle Load' },
+    { label: '45,000L', value: 45000, note: 'Full Multi-Axle Load' },
   ];
 
   const handleOrder = () => {
@@ -68,7 +68,7 @@ export const FuelCalculator: React.FC<FuelCalculatorProps> = ({ onSelectDrop }) 
             Calculate your bulk drop and flow time.
           </h2>
           <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Configure your required fuel volume, grade, and application sector. See exact flow duration, matched delivery vehicle, and wholesale tier pricing.
+            Configure your required fuel volume, grade, and application sector. See exact flow duration, matched delivery vehicle, and wholesale tier pricing up to 45,000L.
           </p>
         </div>
 
@@ -91,7 +91,7 @@ export const FuelCalculator: React.FC<FuelCalculatorProps> = ({ onSelectDrop }) 
               <input
                 type="range"
                 min="500"
-                max="38000"
+                max="45000"
                 step="500"
                 value={litres}
                 onChange={(e) => setLitres(Number(e.target.value))}
